@@ -46,7 +46,9 @@
           </div>
           <div class="hr">
             <div class="hrPadding">
-              <div class="hrDivClass" v-for="item in zyjhTagObj"></div>
+              <div v-for="item in zyjhTagObj">
+                <div class="hrDivClass" v-if="item.check"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -162,7 +164,8 @@ export default {
     position: absolute;
     top: 211px;
   }
-  @-webkit-keyframes zy{
+
+  @-webkit-keyframes zy {
     10% {
       transform: rotate(4deg);
     }
@@ -277,24 +280,24 @@ export default {
 
       .hr {
         width: 360px;
-        border-bottom: 1.33px solid #34377D;
+        height: 1.33px;
+        //border-bottom: 1.33px solid #B4B9D4;
+        background-color: #B4B9D4;
         position: absolute;
         top: 40px;
-        opacity: 0.3;
 
         .hrPadding {
           padding: 0 30px;
           display: flex;
           justify-content: space-between;
           align-items: center;
+          margin-top: -1px;
 
           .hrDivClass {
             width: 75px;
             height: 1.33px;
-            opacity: 1 !important;
-            background-color: #5952AD;
-            position: absolute;
-            z-index: 2;
+            border: 1px solid #5952ad;
+            background-color: #5952ad;
           }
         }
       }
@@ -303,7 +306,7 @@ export default {
         width: 360px;
         height: 217px;
         position: absolute;
-        z-index: 1;
+        z-index: 0;
       }
 
       .tags {
