@@ -1,7 +1,9 @@
 <template>
   <div>
     <!--    头部图片模块-->
-    <div class="bkImg"></div>
+    <div class="bkImg">
+      <img src="../assets/images/headerIconImg.png"/>
+    </div>
     <div class="centen">
       <!--    视频模块-->
       <div class="videoClass">
@@ -153,6 +155,53 @@ export default {
   background-image: url("../assets/images/headerImg.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
+
+  img {
+    width: 142px;
+    height: 149px;
+    position: absolute;
+    top: 211px;
+  }
+  @-webkit-keyframes zy{
+    10% {
+      transform: rotate(4deg);
+    }
+    20% {
+      transform: rotate(8deg);
+    }
+    30% {
+      transform: rotate(12deg);
+    }
+    40% {
+      transform: rotate(16deg);
+    }
+    50% {
+      transform: rotate(20deg);
+    }
+    60% {
+      transform: rotate(16deg);
+    }
+    70% {
+      transform: rotate(12deg);
+    }
+    80% {
+      transform: rotate(8deg);
+    }
+    90% {
+      transform: rotate(4deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  /* 使用 */
+  img {
+    /* 兼容写法 */
+    animation: zy 2.5s .15s linear infinite;
+    -moz-animation: zy 2.5s .15s linear infinite; /* Firefox */
+    -webkit-animation: zy 2.5s .15s linear infinite; /* Safari and Chrome */
+    -o-animation: zy 2.5s .15s linear infinite; /* Opera */
+  }
 }
 
 .centen {
