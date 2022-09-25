@@ -7,7 +7,7 @@
     <div class="centen">
       <!--    视频模块-->
       <div class="videoClass">
-        <video playsinline="" autoplay controls style="width:100%; height:100%;object-fit: fill">
+        <video playsinline="" autoplay controls style="width:100%; height:100%;object-fit: fill" poster='../assets/images/videoImg.jpg'>
           <source src="https://outsourcing-zhongxinzhengquan.oss-cn-hangzhou.aliyuncs.com/zxzq.m4v" type="video/x-m4v">
         </video>
       </div>
