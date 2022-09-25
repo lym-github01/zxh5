@@ -7,7 +7,7 @@
     <div class="centen">
       <!--    视频模块-->
       <div class="videoClass">
-        <video id="videId" playsinline="" controls style="width:100%; height:100%;object-fit: cover" poster='https://outsourcing-zhongxinzhengquan.oss-cn-hangzhou.aliyuncs.com/images/videoImg.jpg'>
+        <video id="videId" controls style="width:100%; height:100%;object-fit: cover" poster='https://outsourcing-zhongxinzhengquan.oss-cn-hangzhou.aliyuncs.com/images/videoImg.jpg' webkit-playsinline="" playsinline="" x5-playsinline="" x-webkit-airplay="allow">
           <source src="https://outsourcing-zhongxinzhengquan.oss-cn-hangzhou.aliyuncs.com/zxzq.m4v" type="video/x-m4v">
         </video>
       </div>
