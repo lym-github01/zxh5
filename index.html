@@ -11,18 +11,18 @@
     <script src="https://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
     <script>
        //jQuery监听事件(窗口状态改变)
-    $(window).resize(function () {
-        if (checkIsFullScreen()) {
-        } else {
-          document.getElementById('videId').load()
-        }
-    })
-    //上面2个监听事件可根据项目需求2选1,然后调用此检测全屏方法
-    function checkIsFullScreen(){
-      var isFullScreen = document.getElementById('videId').fullscreen || document.getElementById('videId').mozFullScreen || document.getElementById('videId').webkitDisplayingFullscreen;
-        console.log("输出",isFullScreen);
-        return isFullScreen == undefined ? false : isFullScreen;
-    }
+    // $(window).resize(function () {
+    //     if (checkIsFullScreen()) {
+    //     } else {
+    //       document.getElementById('videId').load()
+    //     }
+    // })
+    // //上面2个监听事件可根据项目需求2选1,然后调用此检测全屏方法
+    // function checkIsFullScreen(){
+    //   var isFullScreen = document.getElementById('videId').fullscreen || document.getElementById('videId').mozFullScreen || document.getElementById('videId').webkitDisplayingFullscreen;
+    //     console.log("输出",isFullScreen);
+    //     return isFullScreen == undefined ? false : isFullScreen;
+    // }
     </script>
     <!-- built files will be auto injected -->
   </body>

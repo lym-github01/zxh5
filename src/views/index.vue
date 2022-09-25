@@ -7,7 +7,7 @@
     <div class="centen">
       <!--    视频模块-->
       <div class="videoClass">
-        <video id="videId" playsinline="" controls style="width:100%; height:100%;object-fit: fill" poster='https://outsourcing-zhongxinzhengquan.oss-cn-hangzhou.aliyuncs.com/images/videoImg.jpg' @play="videoPlay">
+        <video id="videId" playsinline="" controls style="width:100%; height:100%;object-fit: cover" poster='https://outsourcing-zhongxinzhengquan.oss-cn-hangzhou.aliyuncs.com/images/videoImg.jpg'>
           <source src="https://outsourcing-zhongxinzhengquan.oss-cn-hangzhou.aliyuncs.com/zxzq.m4v" type="video/x-m4v">
         </video>
       </div>
@@ -142,7 +142,6 @@ export default {
     },
     // 进入全屏
     launchFullscreen() {
-      var video = document.getElementById('videId');
       video.webkitRequestFullscreen();
     },
     checkTag(val) {
