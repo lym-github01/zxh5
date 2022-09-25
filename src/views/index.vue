@@ -151,14 +151,6 @@ export default {
       } else {
           // iOS进入全屏
           video.webkitEnterFullscreen();
-
-          // 针对iOS监听不到webkitfullscreenchange事件做的兼容，感知退出全屏
-          let timer = setInterval(() => {
-              if (!video.webkitDisplayingFullscreen) {
-                  // 退出了全屏
-                  clearInterval(timer);
-              }
-          }, 1000);
       }
     },
     videoEnded(e) {
