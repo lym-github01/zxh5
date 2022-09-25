@@ -2,19 +2,19 @@
   <div>
     <!--    头部图片模块-->
     <div class="bkImg">
-      <img src="../assets/images/headerIconImg.png"/>
+      <img src="https://outsourcing-zhongxinzhengquan.oss-cn-hangzhou.aliyuncs.com/images/headerIconImg.png"/>
     </div>
     <div class="centen">
       <!--    视频模块-->
       <div class="videoClass">
-        <video id="videId" playsinline="" controls style="width:100%; height:100%;object-fit: fill" poster='../assets/images/videoImg.jpg' @play="videoPlay" @ended="videoEnded">
+        <video id="videId" playsinline="" controls style="width:100%; height:100%;object-fit: fill" poster='https://outsourcing-zhongxinzhengquan.oss-cn-hangzhou.aliyuncs.com/images/videoImg.jpg' @play="videoPlay" @ended="videoEnded">
           <source src="https://outsourcing-zhongxinzhengquan.oss-cn-hangzhou.aliyuncs.com/zxzq.m4v" type="video/x-m4v">
         </video>
       </div>
       <!--    关于我们-->
       <div class="aboutUs">
         <div class="paddingClass">
-          <img src="../assets/images/aboutUs.png"/>
+          <img src="https://outsourcing-zhongxinzhengquan.oss-cn-hangzhou.aliyuncs.com/images/aboutUs.png"/>
           <div class="tags">
             <div :class="item.check?item.checkClassName:item.className" v-for="(item,index) in tagObj" :key="index"
                  @click="checkTag(item.name)"></div>
@@ -29,14 +29,14 @@
       <!--      面向人群-->
       <div class="toCrowd">
         <div class="paddingClass">
-          <img src="../assets/images/mxrq.png"/>
+          <img src="https://outsourcing-zhongxinzhengquan.oss-cn-hangzhou.aliyuncs.com/images/mxrq.png"/>
         </div>
-        <img class="textClass" src="../assets/images/mxrqTxt.png"/>
+        <img class="textClass" src="https://outsourcing-zhongxinzhengquan.oss-cn-hangzhou.aliyuncs.com/images/mxrqTxt.png"/>
       </div>
       <!--      职业机会-->
       <div class="career">
         <div class="paddingClass">
-          <img src="../assets/images/zyjh.png"/>
+          <img src="https://outsourcing-zhongxinzhengquan.oss-cn-hangzhou.aliyuncs.com/images/zyjh.png"/>
         </div>
         <div class="textClass">
           <img :src="zyjhTxt"/>
@@ -56,20 +56,20 @@
       <!--      投递方式-->
       <div class="delivery">
         <div class="paddingClass">
-          <img src="../assets/images/tdfs.png"/>
+          <img src="https://outsourcing-zhongxinzhengquan.oss-cn-hangzhou.aliyuncs.com/images/tdfs.png"/>
         </div>
-        <img class="textClass" src="../assets/images/tdfsTxt.png"/>
+        <img class="textClass" src="https://outsourcing-zhongxinzhengquan.oss-cn-hangzhou.aliyuncs.com/images/tdfsTxt.png"/>
       </div>
       <!--      即将上线-->
       <div class="online">
-        <img class="textClass" src="../assets/images/jjsxTxt.png"/>
+        <img class="textClass" src="https://outsourcing-zhongxinzhengquan.oss-cn-hangzhou.aliyuncs.com/images/jjsxTxt.png"/>
       </div>
       <!--      常见问答-->
       <div class="qa">
         <div class="paddingClass">
-          <img src="../assets/images/cjwd.png"/>
+          <img src="https://outsourcing-zhongxinzhengquan.oss-cn-hangzhou.aliyuncs.com/images/cjwd.png"/>
         </div>
-        <img class="textClass" src="../assets/images/cjwdTxt.png"/>
+        <img class="textClass" src="https://outsourcing-zhongxinzhengquan.oss-cn-hangzhou.aliyuncs.com/images/cjwdTxt.png"/>
       </div>
       <!--      底部内容-->
       <div class="footer"></div>
@@ -197,7 +197,7 @@ export default {
 .bkImg {
   width: 360px;
   height: 533px;
-  background-image: url("../assets/images/headerImg.png");
+  background-image: url("https://outsourcing-zhongxinzhengquan.oss-cn-hangzhou.aliyuncs.com/images/headerImg.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
 
@@ -251,14 +251,14 @@ export default {
 }
 
 .centen {
-  background-image: url("../assets/images/bkImg.png");
+  background-image: url("https://outsourcing-zhongxinzhengquan.oss-cn-hangzhou.aliyuncs.com/images/bkImg.png");
   background-size: 360px 4600px;
   background-repeat: no-repeat;
 
   .footer {
     width: 360px;
     height: 500px;
-    background-image: url("../assets/images/footerImg.png");
+    background-image: url("https://outsourcing-zhongxinzhengquan.oss-cn-hangzhou.aliyuncs.com/images/footerImg.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     margin-top: 20px;
@@ -365,29 +365,29 @@ export default {
         .zpywTag, .xzrlTag, .gzddTag, .zpywTagCheck, .xzrlTagCheck, .gzddTagCheck {
           width: 96px;
           height: 27px;
-          background-image: url("../assets/images/zpyw.png");
+          background-image: url("https://outsourcing-zhongxinzhengquan.oss-cn-hangzhou.aliyuncs.com/images/zpyw.png");
           background-size: 100% 100%;
           background-repeat: no-repeat;
         }
 
         .zpywTagCheck {
-          background-image: url("../assets/images/zpywCheck.png");
+          background-image: url("https://outsourcing-zhongxinzhengquan.oss-cn-hangzhou.aliyuncs.com/images/zpywCheck.png");
         }
 
         .xzrlTagCheck {
-          background-image: url("../assets/images/xzrlCheck.png");
+          background-image: url("https://outsourcing-zhongxinzhengquan.oss-cn-hangzhou.aliyuncs.com/images/xzrlCheck.png");
         }
 
         .gzddTagCheck {
-          background-image: url("../assets/images/gzddCheck.png");
+          background-image: url("https://outsourcing-zhongxinzhengquan.oss-cn-hangzhou.aliyuncs.com/images/gzddCheck.png");
         }
 
         .xzrlTag {
-          background-image: url("../assets/images/xzrl.png");
+          background-image: url("https://outsourcing-zhongxinzhengquan.oss-cn-hangzhou.aliyuncs.com/images/xzrl.png");
         }
 
         .gzddTag {
-          background-image: url("../assets/images/gzdd.png");
+          background-image: url("https://outsourcing-zhongxinzhengquan.oss-cn-hangzhou.aliyuncs.com/images/gzdd.png");
         }
 
         div {
@@ -447,29 +447,29 @@ export default {
         .gsjsTag, .yjzzTag, .shzrTag, .gsjsTagCheck, .yjzzTagCheck, .shzrTagCheck {
           width: 105px;
           height: 30px;
-          background-image: url("../assets/images/gsjs.png");
+          background-image: url("https://outsourcing-zhongxinzhengquan.oss-cn-hangzhou.aliyuncs.com/images/gsjs.png");
           background-size: 100% 100%;
           background-repeat: no-repeat;
         }
 
         .gsjsTagCheck {
-          background-image: url("../assets/images/gsjsCheck.png");
+          background-image: url("https://outsourcing-zhongxinzhengquan.oss-cn-hangzhou.aliyuncs.com/images/gsjsCheck.png");
         }
 
         .yjzzTagCheck {
-          background-image: url("../assets/images/yjzzCheck.png");
+          background-image: url("https://outsourcing-zhongxinzhengquan.oss-cn-hangzhou.aliyuncs.com/images/yjzzCheck.png");
         }
 
         .shzrTagCheck {
-          background-image: url("../assets/images/shzrCheck.png");
+          background-image: url("https://outsourcing-zhongxinzhengquan.oss-cn-hangzhou.aliyuncs.com/images/shzrcheck.png");
         }
 
         .yjzzTag {
-          background-image: url("../assets/images/yjzz.png");
+          background-image: url("https://outsourcing-zhongxinzhengquan.oss-cn-hangzhou.aliyuncs.com/images/yjzz.png");
         }
 
         .shzrTag {
-          background-image: url("../assets/images/shzr.png");
+          background-image: url("https://outsourcing-zhongxinzhengquan.oss-cn-hangzhou.aliyuncs.com/images/shzr.png");
         }
 
         div {
