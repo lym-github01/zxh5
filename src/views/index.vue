@@ -141,27 +141,24 @@ export default {
       this.launchFullscreen(e.target);
     },
     // 进入全屏
-    launchFullscreen(element) {
-      //此方法不可以在異步任務中執行，否則火狐無法全屏
-      if (element.requestFullscreen) {
-        element.requestFullscreen();
-      } else if (element.mozRequestFullScreen) {
-        element.mozRequestFullScreen();
-      } else if (element.msRequestFullscreen) {
-        element.msRequestFullscreen();
-      } else if (element.oRequestFullscreen) {
-        element.oRequestFullscreen();
-      } else if (element.webkitRequestFullscreen) {
-        element.webkitRequestFullScreen();
+    launchFullscreen(video) {
+      // 进入全屏
+      if (video.requestFullscreen) {
+          // 最新标准
+          video.requestFullscreen();
+      } else if (video.webkitRequestFullscreen) {
+          video.webkitRequestFullscreen();
       } else {
-        var docHtml = document.documentElement;
-        var docBody = document.body;
-        var videobox = element;
-        var cssText = "width:100%;height:100%;overflow:hidden;";
-        docHtml.style.cssText = cssText;
-        docBody.style.cssText = cssText;
-        videobox.style.cssText = cssText + ";" + "margin:0px;padding:0px;";
-        document.IsFullScreen = true;
+          // iOS进入全屏
+          video.webkitEnterFullscreen();
+
+          // 针对iOS监听不到webkitfullscreenchange事件做的兼容，感知退出全屏
+          let timer = setInterval(() => {
+              if (!video.webkitDisplayingFullscreen) {
+                  // 退出了全屏
+                  clearInterval(timer);
+              }
+          }, 1000);
       }
     },
     videoEnded(e) {
