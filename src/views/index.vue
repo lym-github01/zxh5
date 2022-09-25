@@ -7,7 +7,7 @@
     <div class="centen">
       <!--    视频模块-->
       <div class="videoClass">
-        <video id="videId" playsinline="" controls style="width:100%; height:100%;object-fit: fill" poster='https://outsourcing-zhongxinzhengquan.oss-cn-hangzhou.aliyuncs.com/images/videoImg.jpg' @play="videoPlay" @ended="videoEnded">
+        <video id="videId" playsinline="" controls style="width:100%; height:100%;object-fit: fill" poster='https://outsourcing-zhongxinzhengquan.oss-cn-hangzhou.aliyuncs.com/images/videoImg.jpg' @play="videoPlay">
           <source src="https://outsourcing-zhongxinzhengquan.oss-cn-hangzhou.aliyuncs.com/zxzq.m4v" type="video/x-m4v">
         </video>
       </div>
@@ -141,41 +141,9 @@ export default {
       this.launchFullscreen(e.target);
     },
     // 进入全屏
-    launchFullscreen(video) {
-      // 进入全屏
-      if (video.requestFullscreen) {
-          // 最新标准
-          video.requestFullscreen();
-      } else if (video.webkitRequestFullscreen) {
-          video.webkitRequestFullscreen();
-      } else {
-          // iOS进入全屏
-          video.webkitEnterFullscreen();
-      }
-    },
-    videoEnded(e) {
-     console.log("退出全屏")
-    },  
-    exitFullscreen(element) {
-      if (document.exitFullscreen) {
-        document.exitFullscreen();
-      } else if (document.msExitFullscreen) {
-        document.msExitFullscreen();
-      } else if (document.mozCancelFullScreen) {
-        document.mozCancelFullScreen();
-      } else if (document.oRequestFullscreen) {
-        document.oCancelFullScreen();
-      } else if (document.webkitExitFullscreen) {
-        document.webkitExitFullscreen();
-      } else {
-        var docHtml = document.documentElement;
-        var docBody = document.body;
-        var videobox = element;
-        docHtml.style.cssText = "";
-        docBody.style.cssText = "";
-        videobox.style.cssText = "";
-        document.IsFullScreen = false;
-      }
+    launchFullscreen() {
+      var video = document.getElementById('videId');
+      video.webkitRequestFullscreen();
     },
     checkTag(val) {
       this.tagObj.map((item) => {

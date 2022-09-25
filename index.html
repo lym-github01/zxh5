@@ -19,7 +19,8 @@
     })
     //上面2个监听事件可根据项目需求2选1,然后调用此检测全屏方法
     function checkIsFullScreen(){
-        var isFullScreen = document.fullscreen || document.mozFullScreen || document.webkitDisplayingFullscreen;
+      var isFullScreen = document.getElementById('videId').fullscreen || document.getElementById('videId').mozFullScreen || document.getElementById('videId').webkitDisplayingFullscreen;
+        console.log("输出",isFullScreen);
         return isFullScreen == undefined ? false : isFullScreen;
     }
     </script>
