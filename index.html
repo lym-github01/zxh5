@@ -4,9 +4,25 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=0" />
     <title>中信证券</title>
+    
   </head>
   <body>
     <div id="app"></div>
+    <script src="https://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+       //jQuery监听事件(窗口状态改变)
+    $(window).resize(function () {
+        if (checkIsFullScreen()) {
+        } else {
+          document.getElementById('videId').load()
+        }
+    })
+    //上面2个监听事件可根据项目需求2选1,然后调用此检测全屏方法
+    function checkIsFullScreen(){
+        var isFullScreen = document.fullscreen || document.mozFullScreen || document.webkitIsFullScreen;
+        return isFullScreen == undefined ? false : isFullScreen;
+    }
+    </script>
     <!-- built files will be auto injected -->
   </body>
 </html>

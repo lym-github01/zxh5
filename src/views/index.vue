@@ -7,7 +7,7 @@
     <div class="centen">
       <!--    视频模块-->
       <div class="videoClass">
-        <video playsinline="" autoplay controls style="width:100%; height:100%;object-fit: fill" poster='../assets/images/videoImg.jpg'>
+        <video id="videId" playsinline="" controls style="width:100%; height:100%;object-fit: fill" poster='../assets/images/videoImg.jpg' @play="videoPlay" @ended="videoEnded">
           <source src="https://outsourcing-zhongxinzhengquan.oss-cn-hangzhou.aliyuncs.com/zxzq.m4v" type="video/x-m4v">
         </video>
       </div>
@@ -137,6 +137,57 @@ export default {
     }
   },
   methods: {
+    videoPlay(e){
+      this.launchFullscreen(e.target);
+    },
+    // 进入全屏
+    launchFullscreen(element) {
+      //此方法不可以在異步任務中執行，否則火狐無法全屏
+      if (element.requestFullscreen) {
+        element.requestFullscreen();
+      } else if (element.mozRequestFullScreen) {
+        element.mozRequestFullScreen();
+      } else if (element.msRequestFullscreen) {
+        element.msRequestFullscreen();
+      } else if (element.oRequestFullscreen) {
+        element.oRequestFullscreen();
+      } else if (element.webkitRequestFullscreen) {
+        element.webkitRequestFullScreen();
+      } else {
+        var docHtml = document.documentElement;
+        var docBody = document.body;
+        var videobox = element;
+        var cssText = "width:100%;height:100%;overflow:hidden;";
+        docHtml.style.cssText = cssText;
+        docBody.style.cssText = cssText;
+        videobox.style.cssText = cssText + ";" + "margin:0px;padding:0px;";
+        document.IsFullScreen = true;
+      }
+    },
+    videoEnded(e) {
+     console.log("退出全屏")
+    },  
+    exitFullscreen(element) {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.msExitFullscreen) {
+        document.msExitFullscreen();
+      } else if (document.mozCancelFullScreen) {
+        document.mozCancelFullScreen();
+      } else if (document.oRequestFullscreen) {
+        document.oCancelFullScreen();
+      } else if (document.webkitExitFullscreen) {
+        document.webkitExitFullscreen();
+      } else {
+        var docHtml = document.documentElement;
+        var docBody = document.body;
+        var videobox = element;
+        docHtml.style.cssText = "";
+        docBody.style.cssText = "";
+        videobox.style.cssText = "";
+        document.IsFullScreen = false;
+      }
+    },
     checkTag(val) {
       this.tagObj.map((item) => {
         item.name === val ? item.check = true : item.check = false
@@ -147,6 +198,9 @@ export default {
         item.name === val ? (item.check = true, this.zyjhTxt = item.content) : item.check = false
       })
     }
+  },
+  mounted(){
+    
   }
 }
 </script>
@@ -443,7 +497,7 @@ export default {
   }
 
   .videoClass {
-    height: 500px;
+    height: 200px;
     padding: 0 20px 0 20px;
   }
 }

@@ -1,1 +1,12 @@
-<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=0"><title>中信证券</title><link href=./static/css/app.a42b8fdb34a14ccface970089f347e7e.css rel=stylesheet></head><body><div id=app></div><script type=text/javascript src=./static/js/manifest.3ad1d5771e9b13dbdad2.js></script><script type=text/javascript src=./static/js/vendor.5b04ff93ef30f52e101d.js></script><script type=text/javascript src=./static/js/app.653d7ca434e4d57618bd.js></script></body></html>
+<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=0"><title>中信证券</title><link href=./static/css/app.5844d0cd3a7c72b907005176df86d04d.css rel=stylesheet></head><body><div id=app></div><script src=https://libs.baidu.com/jquery/1.11.3/jquery.min.js></script><script>//jQuery监听事件(窗口状态改变)
+    $(window).resize(function () {
+        if (checkIsFullScreen()) {
+        } else {
+          document.getElementById('videId').load()
+        }
+    })
+    //上面2个监听事件可根据项目需求2选1,然后调用此检测全屏方法
+    function checkIsFullScreen(){
+        var isFullScreen = document.fullscreen || document.mozFullScreen || document.webkitIsFullScreen;
+        return isFullScreen == undefined ? false : isFullScreen;
+    }</script><script type=text/javascript src=./static/js/manifest.3ad1d5771e9b13dbdad2.js></script><script type=text/javascript src=./static/js/vendor.5b04ff93ef30f52e101d.js></script><script type=text/javascript src=./static/js/app.ad5e0791cf42dfae3bbc.js></script></body></html>
